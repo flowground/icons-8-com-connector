@@ -1,0 +1,170 @@
+{
+    "title": "Use a [New Version](https://icons8.github.io/icons8-docs/) Instead",
+    "description": "# Icons8 API\n\nIcons8 API allows us to search and obtain [our icons](https://icons8.com/web-app).\n\nYou're welcome to use our icons to extend the functionality of your web and mobile applications, website templates, and even tattoos.\n\n![Tattoos](https://cdn.rawgit.com/icons8/api-docs/cff6fdf0/tattoos.svg)\n\n## Usage Examples\n\nSome examples of what you can do with our icons:\n\n* **Template customization.** This way, [Canva](https://www.canva.com/) uses our icons to customize their layouts.\n\n* **Graphics and text editors.** [Gravit](https://gravit.io/) allows to insert our icons into the mockups.\n\n* **Any application with customization.** [TimeTune](http://timetune.center/) uses our icons to customize the activities.\n\n## Getting Started\n\nTo get started, please [contact us](https://icons8.com/contact) to obtain an API key.\n\n## Pricing\n\nOur API license starts at $100/month.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/icons8.com/1.0.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.icons8.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_api_iconsets_v3_categories_platform__platform__language__language_": {
+            "main": "./lib/actions/get_api_iconsets_v3_categories_platform__platform__language__language_.js",
+            "title": "Categories",
+            "description": "The operation will not return the categories that have less than 10 icons.\nWe need it to test the categories without showing garbage on the production website.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_iconsets_v3_categories_platform__platform__language__language_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_iconsets_v3_category_category__category__subcategory__subcategory__amount__amount__offset__offset__platform__platform__language__language_": {
+            "main": "./lib/actions/get_api_iconsets_v3_category_category__category__subcategory__subcategory__amount__amount__offset__o.js",
+            "title": "By Category",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_iconsets_v3_category_category__category__subcategory__subcategory__amount__amount__offset__o.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_iconsets_v3_latest_term__term__amount__amount__offset__offset__platform__platform__language__language_": {
+            "main": "./lib/actions/get_api_iconsets_v3_latest_term__term__amount__amount__offset__offset__platform__platform__language_.js",
+            "title": "Latest",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_iconsets_v3_latest_term__term__amount__amount__offset__offset__platform__platform__language_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_iconsets_v3_search_term__term__amount__amount__offset__offset__platform__platform__language__language__exact_amount__exact_amount_": {
+            "main": "./lib/actions/get_api_iconsets_v3_search_term__term__amount__amount__offset__offset__platform__platform__language_.js",
+            "title": "By Keyword v3",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_iconsets_v3_search_term__term__amount__amount__offset__offset__platform__platform__language_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_iconsets_v3_total_since__since_": {
+            "main": "./lib/actions/get_api_iconsets_v3_total_since__since_.js",
+            "title": "Totals",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_iconsets_v3_total_since__since_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_iconsets_v4_search_term__term__amount__amount__offset__offset__platform__platform__language__language__exact_amount__exact_amount_": {
+            "main": "./lib/actions/get_api_iconsets_v4_search_term__term__amount__amount__offset__offset__platform__platform__language_.js",
+            "title": "By Keyword v4",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_iconsets_v4_search_term__term__amount__amount__offset__offset__platform__platform__language_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_api_task_web_font_collection": {
+            "main": "./lib/actions/post_api_task_web_font_collection.js",
+            "title": "From a Collection",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_api_task_web_font_collection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_api_task_web_font_icons": {
+            "main": "./lib/actions/post_api_task_web_font_icons.js",
+            "title": "From Separate Icons",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_api_task_web_font_icons.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

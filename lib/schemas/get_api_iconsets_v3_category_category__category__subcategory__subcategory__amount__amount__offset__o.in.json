@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "properties": {
+        "category": {
+            "required": true,
+            "type": "string"
+        },
+        "subcategory": {
+            "required": true,
+            "type": "string"
+        },
+        "amount": {
+            "required": true,
+            "type": "number",
+            "default": 25
+        },
+        "offset": {
+            "required": true,
+            "type": "number"
+        },
+        "platform": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "ios7",
+                "win8",
+                "win10",
+                "android",
+                "androidL",
+                "color",
+                "office"
+            ]
+        },
+        "language": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "en-US",
+                "fr-FR",
+                "de-DE",
+                "it-IT",
+                "pt-BR",
+                "pl-PL",
+                "ru-RU",
+                "es-ES"
+            ]
+        }
+    }
+}

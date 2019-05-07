@@ -1,0 +1,64 @@
+{
+    "type": "object",
+    "properties": {
+        "term": {
+            "required": true,
+            "type": "string"
+        },
+        "amount": {
+            "required": true,
+            "type": "number",
+            "default": 50
+        },
+        "offset": {
+            "required": true,
+            "type": "number"
+        },
+        "platform": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "all",
+                "ios7",
+                "ios11",
+                "win8",
+                "win10",
+                "android",
+                "androidL",
+                "color",
+                "office",
+                "ultraviolet",
+                "nolan",
+                "p1em",
+                "dotty",
+                "dusk",
+                "Dusk_Wired",
+                "cotton",
+                "doodle",
+                "flat_round"
+            ],
+            "default": "all"
+        },
+        "language": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "en-US",
+                "fr-FR",
+                "de-DE",
+                "it-IT",
+                "pt-BR",
+                "pl-PL",
+                "ru-RU",
+                "es-ES",
+                "zh-CN",
+                "ja-JP"
+            ],
+            "default": "en-US"
+        },
+        "exact_amount": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

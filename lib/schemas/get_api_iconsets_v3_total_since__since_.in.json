@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "since": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
